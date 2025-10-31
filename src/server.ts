@@ -12,7 +12,7 @@ app.use(helmet());
 app.use(logger("dev"));
 
 app.get("/", (_, res: Response) => {
-	res.json({ message: "fuck off I'm working here!" });
+	res.json({ message: "fuck off I'm working help!" }), 200;
 });
 
 app.listen(port, () => {
