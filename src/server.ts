@@ -13,11 +13,11 @@ const port = process.env.PORT || 3000;
 app.use(helmet());
 app.use(logger("dev"));
 
-app.all("/api/auth/*", toNodeHandler(auth));
+app.all("/api/auth/{*any}", toNodeHandler(auth));
 app.use(express.json());
 
 app.get("/", (_, res: Response) => {
-	res.json({ message: "fuck off I'm working help!" }), 200;
+	res.json({ message: "It works!" }), 200;
 });
 
 app.listen(port, () => {
